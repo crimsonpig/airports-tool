@@ -1,6 +1,6 @@
 package com.crimsonpig.airports
 import com.crimsonpig.airports.domain._
-
+import com.crimsonpig.airports.factory._ 
 
 object RunMain {
 
@@ -9,8 +9,9 @@ object RunMain {
         println("No airports file specified!")
         return
     }
-    val airportsFilePath = args(0);
-    val airport:Airport = new FS9Airport("KLAX", GeoPoint(0.00, 0.00) , 13);
+    var airportsFilePath = args(0);
+    val factory = AbstractAirportFactory("9")
+    factory.getAirportsFromFile(airportsFilePath).map(println)
   }
 
 }
