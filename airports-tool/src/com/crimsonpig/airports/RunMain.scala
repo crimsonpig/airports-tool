@@ -6,12 +6,19 @@ object RunMain {
 
   def main(args: Array[String]): Unit = {
     if (args.length == 0) {
-        println("No airports file specified!")
+        println("No input file specified!")
         return
     }
-    var airportsFilePath = args(0);
+    if (args.length == 1){
+        println("No output file specified")
+        return
+    }
+    val inputFilePath = args(0);
+    val outputFilePath = args(1);
     val factory = AbstractAirportFactory("9")
-    factory.getAirportsFromFile(airportsFilePath).map(println)
+    val airports = factory.getAirportsFromFile(inputFilePath)
+    airports.map(println)
+    factory.saveAirportsToFile(outputFilePath, airports)
   }
 
 }
