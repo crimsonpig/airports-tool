@@ -1,17 +1,9 @@
 package com.crimsonpig.airports.domain
 
-class Airport(
+abstract class Airport(
 	var identifier: String, 
-	var latitude: Double, 
-	var longitude: Double, 
+	var location: GeoPoint, 
 	var elevation: Int
 ) {
-    def toFileLine(): String = {
-        ???
-    }
-}
-object Airport {
-	def fromFileLine(line: String): Airport = {
-		???
-	}
+    def toFileLine(): String;
 }

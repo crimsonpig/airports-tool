@@ -10,7 +10,7 @@ object RunMain {
         return
     }
     val airportsFilePath = args(0);
-    val airport:Airport = new FS9Airport("KLAX", 0.00, 0.00, 13);
+    val airport:Airport = new FS9Airport("KLAX", GeoPoint(0.00, 0.00) , 13);
   }
 
 }
