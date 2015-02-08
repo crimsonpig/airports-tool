@@ -2,8 +2,9 @@ package com.crimsonpig.airports.domain
 
 class FS9Airport(identifier: String, location: GeoPoint, elevation: Int) 
 	extends Airport(identifier, location, elevation) {
+	//EDDF,N50* 01.99830',E08* 34.22730',364
 	def toFileLine() = {
-	  ""
+	  identifier+','+location.latFileLine+','+location.lonFileLine+','+elevation
 	}
 	override def toString(): String = {
 	  "ident: "+identifier+", lat: "+location.latitude+", lon: "+

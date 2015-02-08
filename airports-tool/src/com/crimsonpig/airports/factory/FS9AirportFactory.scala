@@ -19,7 +19,7 @@ class FS9AirportFactory extends AbstractAirportFactory {
 	def saveAirportsToFile(filePath:String, airports: List[Airport]): Unit = {
 	    val writer = new PrintWriter(new File(filePath))
 	    for(airport <- airports){
-	      writer.println(airport)
+	      writer.println(airport.toFileLine)
 	    }
 	    writer.close
 	}

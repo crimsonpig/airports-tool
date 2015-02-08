@@ -17,7 +17,7 @@ object RunMain {
     val outputFilePath = args(1);
     val factory = AbstractAirportFactory("9")
     val airports = factory.getAirportsFromFile(inputFilePath)
-    airports.map(println)
+    //airports.map(println)
     factory.saveAirportsToFile(outputFilePath, airports)
   }
 
