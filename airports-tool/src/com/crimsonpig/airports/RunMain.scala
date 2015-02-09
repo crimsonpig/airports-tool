@@ -17,8 +17,12 @@ object RunMain {
     val outputFilePath = args(1);
     val factory = AbstractAirportFactory("9")
     val airports = factory.getAirportsFromFile(inputFilePath)
-    //airports.map(println)
     factory.saveAirportsToFile(outputFilePath, airports)
+//  val x = GeoPoint("N20* 59.59830'","W101* 28.85780'")
+//    val x = GeoPoint("N38* 53.23'","W77* 00.32'")
+//    val x = GeoPoint("N36* 10.00000'","E137* 55.36670'")
+//    println(x.latFileLine)
+//    println(x.lonFileLine)
   }
 
 }
